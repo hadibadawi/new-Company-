@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import './css/style.css';
 import './sass/style.scss';
 import './fonts/Cairo-Regular.ttf';
 import '@fortawesome/fontawesome-free/js/all.js';

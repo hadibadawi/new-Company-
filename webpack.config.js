@@ -1,6 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -9,9 +10,8 @@ export default {
   mode: 'development',
   entry: './src/index.js', 
   output: {
-    publicPath:'/',
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true, 
   },
   // ... الكود العلوي كما هو
@@ -20,7 +20,11 @@ module: {
   rules: [
     {
       test: /\.s[ac]ss$|\.css$/i,
-      use: ["style-loader", "css-loader", "sass-loader"],
+      use: [
+          MiniCssExtractPlugin.loader,
+         "css-loader", 
+         "sass-loader",
+      ],
     },
     {
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -96,6 +100,10 @@ module: {
       template: 'src/contact.html',
       filename: 'contact.html',
     }),
+
+    new MiniCssExtractPlugin({
+      filename:"style.css"
+    })
   ],
   
   devServer: {
