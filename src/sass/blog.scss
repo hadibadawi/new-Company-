@@ -1,0 +1,90 @@
+@use './variables' as *;
+
+
+
+.banner-blog{
+    #banner-img{
+        background-image: url(../imges/banner-blog.jpg);
+    }
+}
+
+
+.posts{
+    .search-box{
+        padding: 15px;
+        margin-top: 5px;
+        box-shadow: 0px 1px 1px 1px $custom-color;
+        border: 1px solid $custom-color;
+    }
+
+    .card{
+        .card-body{
+            .card-text{
+                white-space:nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: $card-text-color;
+            }
+        }
+    }
+}
+
+.form-control{
+    &:focus{
+        border-color: $main-color !important;
+        box-shadow: none !important;
+    }
+}
+
+.posts-details{
+    .card{
+
+        .card-title{
+            color: $main-color;
+            font-weight: 800;
+        }
+        .card-text{
+            color: $card-text-color;
+        }
+
+    }
+}
+
+.one-social{
+    color: $card-text-color;
+    border: 1px solid $card-text-color;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin-bottom: 3px;
+    color: $main-color;
+
+    &:hover,
+    &:focus{
+        color: $card-text-color;
+        background-color: $main-color
+    }
+
+}
+
+#title-post{
+
+    font-size: 18px;
+    color: $main-color;
+    margin-bottom: 5px;
+    
+}
+
+
+.add-blog{
+    label{
+        &:first-child{
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}

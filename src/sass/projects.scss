@@ -1,0 +1,80 @@
+/* projects.scss */
+@use './variables' as *;
+
+
+.banner{
+    position: relative;
+    #banner-img{
+        background-image: url(../imges/projects-banner.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 10%;
+        height: 250px;
+    }
+
+    .overlay{
+        position: absolute;
+        background-color: rgb(65,155,155,0.5);
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .title1{
+        font-weight: bold;
+        color: #fff;
+    }
+}
+
+.our-works{
+    .custom-btn-2{
+        color: #363636;
+        background-color: #fff;
+        border: none;
+        border-radius: 1px ;
+        font-weight: bold;
+        position: absolute;
+        right: 25px;
+        top: 20px;
+
+        &:hover,
+        &:focus{
+            color: #fff;
+            background-color:$main-color;
+            border: none;
+        }
+    }
+}
+
+
+.btn , button{
+    &:focus,
+    &:active{
+        outline: none !important;
+        box-shadow: none !important;    
+    }
+}
+
+#image-gallery{
+  .modal-footer{
+    display: block;
+  }
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.project-details{
+    .card{
+        .card-body{
+            .card-title{
+                font-weight: 800;
+                color: $main-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+.about-banner{
+    #banner-img{
+        background-image: url(../imges/banner-about.jpg);
+    }
+
+}
+
+.our-team{
+    .card-text{
+        font-size: 14px;
+        margin: 14px 0;
+        font-weight: 600;
+        color: $card-text-color;
+    }
+}
