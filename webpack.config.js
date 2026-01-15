@@ -13,6 +13,7 @@ export default {
     filename: 'main.js',
     path: path.resolve(__dirname, 'docs'),
     clean: true, 
+    publicPath: '',
   },
   // ... الكود العلوي كما هو
 
@@ -63,41 +64,41 @@ module: {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'index.html',
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: 'src/projects.html',
+      template: 'projects.html',
       filename: 'projects.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/project-details.html',
+      template: 'project-details.html',
       filename: 'project-details.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/blog.html',
+      template: 'blog.html',
       filename: 'blog.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/blog-details.html',
+      template: 'blog-details.html',
       filename: 'blog-details.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/add-blog.html',
+      template: 'add-blog.html',
       filename: 'add-blog.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/about.html',
+      template: 'about.html',
       filename: 'about.html',
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/contact.html',
+      template: 'contact.html',
       filename: 'contact.html',
     }),
 
